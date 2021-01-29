@@ -1,0 +1,62 @@
+---
+ungrouped:
+  hosts:
+
+APAC:
+  hosts:
+{% for item in csvfile.split("\n") %}
+{%   if loop.index != 1 %}
+{%     set list = item.split(",") %}
+{%      if list[5] == 'AP' %}
+    {{  list[0] }}:
+      model: {{  list[3] }}
+      serial: {{ list[1] }}
+      ip: {{ list[6] }}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
+EMEA:
+  hosts:
+{% for item in csvfile.split("\n") %}
+{%   if loop.index != 1 %}
+{%     set list = item.split(",") %}
+{%      if list[5] == 'EMEA' %}
+    {{  list[0] }}:
+      model: {{  list[3] }}
+      serial: {{ list[1] }}
+      ip: {{ list[6] }}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
+LATAM:
+  hosts:
+{% for item in csvfile.split("\n") %}
+{%   if loop.index != 1 %}
+{%     set list = item.split(",") %}
+{%      if list[5] == 'LA' %}
+    {{  list[0] }}:
+      model: {{  list[3] }}
+      serial: {{ list[1] }}
+      ip: {{ list[6] }}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
+NA:
+  hosts:
+{% for item in csvfile.split("\n") %}
+{%   if loop.index != 1 %}
+{%     set list = item.split(",") %}
+{%      if list[5] == 'NA' %}
+    {{  list[0] }}:
+      model: {{  list[3] }}
+      serial: {{ list[1] }}
+      ip: {{ list[6] }}
+{% endif %}
+{% endif %}
+{% endfor %}

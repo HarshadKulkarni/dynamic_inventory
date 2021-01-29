@@ -1,0 +1,14 @@
+LAB:
+  hosts:
+    hopkinslab1-site-a-lcs.gw.abc.com:
+    #admin_l3
+    hopkinslab1-site-a-plant-swt.gw.abc.com:
+    #plant_l3
+    hopkinslab1-swt.gw.abc.com:
+    #admin-l2
+    shanghailab12-swt.gw.sg.abc.com:
+    #admin-l2
+    hopkinslab-site-a-plant2-swt.gw.abc.com:
+    #plant_l2
+    hopkinslab22-pfr.gw.abc.com:
+    #pfr_l3

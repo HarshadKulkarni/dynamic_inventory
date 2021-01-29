@@ -1,0 +1,9 @@
+{% for item in csvfile %}
+{%   if loop.index != 1 %}
+{%     set list = item.split(",") %}
+  - host: '{{ list[0]|trim() }}'
+    inventory_name: '{{ list[0]|trim() }}'
+    model: '{{ list[3]|trim() }}'
+    region: '{{ list[5]|trim() }}'
+{%   endif %}
+{% endfor %}
